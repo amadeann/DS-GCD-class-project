@@ -1,6 +1,6 @@
 # Codebook
 
-* Structure of this codebook is based on the template from Joris Schut. Link [here](https://gist.github.com/JorisSchut/dbc1fc0402f28cad9b41#file-gistfile1-rmd)*
+* Structure of this codebook is based on the template from Joris Schut. Link [here](https://gist.github.com/JorisSchut/dbc1fc0402f28cad9b41#file-gistfile1-rmd) *
 
 ---
 title: "Codebook template"
