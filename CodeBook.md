@@ -1,12 +1,8 @@
 # Codebook
 
----
-
-title: "Class Project - Getting and Cleaning Data"
-author: "Amadeusz Annissimo"
-date: "October 17, 2015"
-
----
+**title:** "Class Project - Getting and Cleaning Data"  
+**author:** "Amadeusz Annissimo"  
+**date:** "October 17, 2015"
 
 ## Project Description
 
@@ -57,7 +53,7 @@ Consequently, only the variables listed in the 'features.txt' file of the origin
 
 Detailed description of the cleanup process can be found in the [README.md](README.md) file
 
-##Description of the variables in the tidy_data.txt file
+##Description of the variables in the tidy_dataset.txt file
 
 Tidy dataset contains 180 observations with and 68 variables. 
 
