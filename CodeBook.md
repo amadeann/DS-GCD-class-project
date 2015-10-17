@@ -47,8 +47,8 @@ Their list can be found in the README.txt file of the original dataset.
 
 ##Creating the tidy datafile
 
-###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
+###Guide to create the tidy_dataset.txt file
+In order to obtain the tidy dataset, please run the [run_analysis.R](run_analysis.R) file. Code in the file handles the download of the file from the UCI Machine Learning Repository website and does all the necessary cleanups and aggregations.
 
 ###Cleaning of the data
 
@@ -57,31 +57,99 @@ Consequently, only the variables listed in the 'features.txt' file of the origin
 
 Detailed description of the cleanup process can be found in the [README.md](README.md) file
 
-##Description of the variables in the tiny_data.txt file
-General description of the file including:
- - Dimensions of the dataset
- - Summary of the data
- - Variables present in the dataset
+##Description of the variables in the tidy_data.txt file
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+Tidy dataset contains 180 observations with and 68 variables. 
 
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
+First 2 variables idenfity a single observations:
 
-Some information on the variable including:
- - Class of the variable
- - Unique values/levels of the variable
- - Unit of measurement (if no unit of measurement list this as well)
- - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels). 
+Subject - number of the study subject (a person, in total there were 30 subjects). Variable is of class "numeric".
+Activity - a descriptive label of the activity performed by the subject (walking, walking upstairs, walking downstairs, sitting, standing, laying). Variable is of class "label".
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+Another 66 variables represent the mean value of mean and standard deviation measurments in the original data set. All of the 66 variables are of the numeric type.
 
-####Notes on variable 1:
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
+Naming convenction of the variables follows the features naming convention from the original data set. Full description can be found [here](/UCI HAR Dataset/features_info.txt). To summarize:
+
+- first letter, t or f indicate the time or frequency domain signals repectively.
+- Strings 'BodyAcc' and 'BodyBodyAcc' indicate that the variable was measured as body acceleration signals using accelerometer
+- String 'GravityAcc' indicates that the variable was measured as gravity acceleration signals using accelerometer
+- Strings 'BodyGyro' and BodyBody indicate that the variable was measured as body angular velocity signals using gyroscope
+- String 'Jerk' indicates the jerk signals
+- String 'Mag' indicates the magnitude of the signal
+- Strings 'X', 'Y' and 'Z' each represent the measurment value for each dimension (X,Y,Z). 
+
+Full list of variables in the tidy dataset:
+
+- Subject
+- Activity
+- tBodyAcc_mean_X
+- tBodyAcc_mean_Y
+- tBodyAcc_mean_Z
+- tBodyAcc_std_X
+- tBodyAcc_std_Y
+- tBodyAcc_std_Z
+- tGravityAcc_mean_X
+- tGravityAcc_mean_Y
+- tGravityAcc_mean_Z
+- tGravityAcc_std_X
+- tGravityAcc_std_Y
+- tGravityAcc_std_Z
+- tBodyAccJerk_mean_X
+- tBodyAccJerk_mean_Y
+- tBodyAccJerk_mean_Z
+- tBodyAccJerk_std_X
+- tBodyAccJerk_std_Y
+- tBodyAccJerk_std_Z
+- tBodyGyro_mean_X
+- tBodyGyro_mean_Y
+- tBodyGyro_mean_Z
+- tBodyGyro_std_X
+- tBodyGyro_std_Y
+- tBodyGyro_std_Z
+- tBodyGyroJerk_mean_X
+- tBodyGyroJerk_mean_Y
+- tBodyGyroJerk_mean_Z
+- tBodyGyroJerk_std_X
+- tBodyGyroJerk_std_Y
+- tBodyGyroJerk_std_Z
+- tBodyAccMag_mean
+- tBodyAccMag_std
+- tGravityAccMag_mean
+- tGravityAccMag_std
+- tBodyAccJerkMag_mean
+- tBodyAccJerkMag_std
+- tBodyGyroMag_mean
+- tBodyGyroMag_std
+- tBodyGyroJerkMag_mean
+- tBodyGyroJerkMag_std
+- fBodyAcc_mean_X
+- fBodyAcc_mean_Y
+- fBodyAcc_mean_Z
+- fBodyAcc_std_X
+- fBodyAcc_std_Y
+- fBodyAcc_std_Z
+- fBodyAccJerk_mean_X
+- fBodyAccJerk_mean_Y
+- fBodyAccJerk_mean_Z
+- fBodyAccJerk_std_X
+- fBodyAccJerk_std_Y
+- fBodyAccJerk_std_Z
+- fBodyGyro_mean_X
+- fBodyGyro_mean_Y
+- fBodyGyro_mean_Z
+- fBodyGyro_std_X
+- fBodyGyro_std_Y
+- fBodyGyro_std_Z
+- fBodyAccMag_mean
+- fBodyAccMag_std
+- fBodyBodyAccJerkMag_mean
+- fBodyBodyAccJerkMag_std
+- fBodyBodyGyroMag_mean
+- fBodyBodyGyroMag_std
+- fBodyBodyGyroJerkMag_mean
+- fBodyBodyGyroJerkMag_std
+
 
 ##Sources
 
 1. Structure of this codebook is based on the template from Joris Schut. Link [here](https://gist.github.com/JorisSchut/dbc1fc0402f28cad9b41#file-gistfile1-rmd).
-
-##Annex
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
