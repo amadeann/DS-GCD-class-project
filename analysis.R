@@ -30,3 +30,21 @@ if(!file.exists(exDirName)) {
 } else {
     message(paste(exDirName, "directory already existed."))   
 }
+
+# Load training and test datasets
+
+trainFile <- "UCI HAR Dataset/train/X_test.txt"
+trainData <- read.table(trainFile, nrows = 6)
+
+testFile <- "UCI HAR Dataset/test/X_test.txt"
+testData <- read.table(testFile, nrows = 6)
+
+# Load the features variables to filter variabiables for the clean data set
+
+featuresFile <- "UCI HAR Dataset/features.txt"
+features <- as.vector(read.table(featuresFile, colClasses = c("numeric", "character"))[,2])
+
+# Return a logical vector. Value is TRUE, when the variable name contains mean() or std() string.
+
+selectedFeatures <- as.vector(sapply(features,function(x) (length(grep("(mean\\(\\)|std\\(\\))",x))>0)))
+features[selectedFeatures]
