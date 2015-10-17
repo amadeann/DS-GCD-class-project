@@ -1,14 +1,4 @@
-# check if the directory for class 3 exists and create it if it doesnt
-
-#subDir <- "class3"
-#if (!file.exists(subDir)){
-#    dir.create(subDir)
-#    message(paste(subdir, "directory created"))
-#} else {
-#    message(paste(subDir, "directory already existed. No directory created."))
-#}
-
-# Check whether the file to be donwloaded already exists and if not, download it
+# Check whether the file to be downloaded already exists and if not, download it
 
 destFile <- "samsung.zip"
 
