@@ -15,7 +15,7 @@ if(!file.exists(destFile)) {
 exDirName <- "UCI HAR Dataset"
 
 if(!file.exists(exDirName)) {
-    unzip(destFile, exdir = subDir)
+    unzip(destFile)
     message(paste("" ,destFile, "extracted to", exDirName, "diretory"))
 } else {
     message(paste(exDirName, "directory already existed."))   
@@ -83,3 +83,9 @@ library(reshape2)
 
 meltFullData <- melt(fullData,id=c("Subject","Activity"),measure.vars=colnames(fullData)[3:ncol(fullData)])
 tidyDataSet <- dcast(meltFullData, Subject + Activity~ variable,mean)
+
+# Print tidyDataSet to a file
+
+outputFileName <- "tidy_dataset.txt"
+
+write.table(tidyDataSet, file = outputFileName, row.name=FALSE)
